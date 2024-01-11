@@ -1,0 +1,23 @@
+{% comment %}
+    para esta pagina tener en cuenta.
+    EXTENDS -> sirve para extender de una plantilla en este caso ./layouts/base.html
+    BLOCK -> para cargar en la plantilla base datos de manera dinamica.
+    LOAD -> para habilitar la carga de archivos dinamicos.
+{% endcomment %}
+{% extends './layouts/base.html' %}
+{% load static %}
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/faq.css' %}">    
+{% endblock styles %}
+{% block title %}FAQS{% endblock title %}
+{% block main %}
+    {% comment %}
+        para esta plantilla usaremos la carga statica de archivos ya sean js,css o imagenes.    
+    {% endcomment %}
+    <h1>Pagina del apartado de FAQ | 2024</h1>
+    <p>a continuacion veremos la tecnologia que usamos en este pequeño proyecto del curos de django.</p>
+    <img src="{% static 'images/django.jpg' %}">
+    <p>Note rindas sigue adelante.</p>
+    <h5> CAMINO A SER DESARROLLADOR SENIOR .....</h5>
+{% endblock main %}
+    

@@ -19,5 +19,9 @@ urlpatterns = [
     path('contacto/',views.contacto, name='contacto'),
     
     # dirección para la vista sobreNosotros con un parámetro por la URL.
-    path('sobreNosotros/<str:nombre>',views.sobreNosotros, name='sobreNosotros')
+    path('sobreNosotros/<str:nombre>',views.sobreNosotros, name='sobreNosotros'),
+    # dirección para ver la carga de archivos estáticos.
+    path('faq/', views.faq, name='faq'),
+    # dirección para ver la carga de la base.html y archivos estáticos.
+    path('portafolio/', views.portafolio, name='portafolio')
 ]

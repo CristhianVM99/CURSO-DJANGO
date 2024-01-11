@@ -1,0 +1,43 @@
+{# carga de los archivos estaticos. #}
+{% load static %}
+
+{# plantilla base para las paginas web#}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    {# link de estilos por defecto cargados. #}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">    
+
+    {# BLOQUE -> para cargar archivos de estilos de manera dinamica. #}
+    {% block styles %}{% endblock styles %}        
+
+    {# BLOQUE -> para cargar un titulo de manera dinamica. #}
+    <title>CURSO DE DJANGO - {% block title %}{% endblock title %}</title>    
+</head>
+<body>
+    {# INCLUDE -> incluimos un pedazo de codigo referente al menu de la aplicaicon. #}
+    {% include 'layouts/partials/menu.html' %} 
+
+    {% comment %}
+        plantilla base para evitar la redundancia para la carga de 
+        archivos css en otras plantillas.    
+    {% endcomment %} 
+    
+    {# BLOQUE -> para cargar datos principales o de tipo main que el usuario debe ver. #}
+    <main>
+        {% block main %}{% endblock main %}
+    </main>
+
+    {# INCLUDE -> incluimos un pedazo de codigo referente al footer de la aplicación. #}
+    {% include "layouts/partials/footer.html" %}
+
+    {# BLOQUE -> para cargar datos de tipo script de manera dinamica. #}
+    {% block scripts %}{% endblock scripts %}
+
+    {# DESARROLLADOR CRISTHIAN VILLCA MAMANI <3 #}
+</body>
+</html>

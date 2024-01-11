@@ -1,12 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CURSO DE DJANGO - CONTACTO</title>
-</head>
-<body>
-    <h1>Contacto</h1>
-    <p>bienvenido al curso de django.</p>
-</body>
-</html>
+{% comment %}
+    para esta pagina tener en cuenta.
+    EXTENDS -> sirve para extender de una plantilla en este caso ./layouts/base.html
+    BLOCK -> para cargar en la plantilla base datos de manera dinamica.
+{% endcomment %}
+{% extends "./layouts/base.html" %}
+{% block title %}CONTACTO{% endblock title %}
+{% block main %}
+    {% comment %}
+        para esta plantilla veremos lo que son la carga de archivos html en Django 
+        para ello usaremos el metodo RENDER.    
+    {% endcomment %}
+    <h1>- PAGINA DE CONTACTO -</h1>
+    <p>
+        En esta parte de la pagina podras obtener mas informacion acerca de lo que es la pagina web.
+        <br>
+        tambien podras ver mas detalles acerca de como funciona realmente el curso de django.
+        <br> 
+        desarrollo del curso de django aplicando codificacion limpia. | 2024
+    </p>
+{% endblock main %}
+    

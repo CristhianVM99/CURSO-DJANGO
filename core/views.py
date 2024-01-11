@@ -22,3 +22,12 @@ def sobreNosotros(request,nombre):
     lenguajes = ['php','java','c','c#','c++','python','js','go','rust','ruby','kotlin']
     context = { 'nombre' : nombre, 'lenguajes' : lenguajes }
     return render(request,'sobreNosotros.html',context)
+
+# TODO: retorna una vista html con la carga de archivos estáticos.
+def faq(request):
+    context = { 'mensaje': 'todo esta bien con la carga de archivos estáticos'}
+    return render(request, 'faqs.html', context)
+
+# TODO: retorna una vista html con la carga de archivos base y estáticos.
+def portafolio(request):
+    return render(request, 'portafolio.html', {})

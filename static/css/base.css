@@ -1,0 +1,43 @@
+main{
+    min-height: 400px;
+}
+nav {
+    background-color: #333; /* Color de fondo de la barra de navegación */
+    padding: 15px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #555; /* Cambiar el color de fondo al pasar el ratón */
+}
+
+@media screen and (max-width: 600px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav li {
+        float: none;
+        margin-bottom: 5px;
+    }
+}
