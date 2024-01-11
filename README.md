@@ -16,7 +16,8 @@ Asegúrate de tener instalado lo siguiente antes de comenzar:
 
    ```bash
    git clone https://github.com/CristhianVM99/CURSO-DJANGO
-   cd CURSO-DJANGO```
+   cd CURSO-DJANGO
+   ```
 2. Crea tu entorno virtual:
    ```bash
     pyenv virtualenv 3.12.0 django
