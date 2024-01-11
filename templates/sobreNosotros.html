@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CURSO DE DJANGO - CONTACTO</title>
+  </head>
+  <body>
+    
+    {% comment %}
+        - uso del bloque comentario -
+        en este caso tenemos la platilla que solo corresponde a la informacioón del usuario.
+        asi como los lenguajes de programación que domina el usuario(a).
+    {% endcomment %}        
+
+    <h1>Contacto</h1>
+
+    {# carga de variables desde la ruta de manera dinamica. #}
+    <p>
+      bienvenido al curso de django. {{ nombre }} espero te encuentres muy bien
+    </p>
+    <p>{{lenguajes}}</p>
+
+    
+    {% comment %}
+        recorrido de los lenguajes que domina el usuario asi mismo en caso de que el lenguaje
+        sea -> JS imprimiremos el valor de tipo uppercase.
+
+        * para este ejemplo usaremos cliclo for y condiciones if.
+    {% endcomment %}
+        
+    <ul>
+      {% for leng in lenguajes %} {% if leng == 'js' %}
+      <li><b>{{leng|upper}}</b></li>
+      {% else %}
+      <li>{{leng}}</li>
+      {% endif%} {% endfor %}
+
+      {# tambien podemos usar | clave para especificar mejor los datos a mostrar en la plantilla. #}
+      <h5>total de lenguajes dominados por el usuario. -> {{lenguajes|length}}</h5>
+    </ul>
+  </body>
+</html>
